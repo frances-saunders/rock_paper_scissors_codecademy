@@ -1,6 +1,9 @@
+//This script fulfills the project reqs for "Rock, Paper, Scissors" in Codecademy
+
 const getUserChoice = (userInput) => {
   userInput = userInput.toLowerCase();
 
+  //sets possible userInput values
   if (
     userInput === "rock" ||
     userInput === "paper" ||
@@ -12,6 +15,7 @@ const getUserChoice = (userInput) => {
   }
 };
 
+//sets randomly generated computer input
 const getComputerChoice = () => {
   const randomNum = Math.floor(Math.random() * 3);
   switch (randomNum) {
@@ -27,6 +31,7 @@ const getComputerChoice = () => {
   }
 };
 
+//sets conditional responses based on user and computer choices
 const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === computerChoice) {
     return "You tied!";
@@ -57,6 +62,7 @@ const determineWinner = (userChoice, computerChoice) => {
   }
 };
 
+//sets playGame func and conditions
 const playGame = () => {
   const userChoice = getUserChoice("rock");
   const computerChoice = getComputerChoice();
